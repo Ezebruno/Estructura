@@ -5,14 +5,14 @@
     font-family: Arial, sans-serif;
 }
 body {
-    background-color: #aba7a7;
+    background: linear-gradient(to bottom, #ffffff, #f2f2f2);
 }
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 50px;
-    background: #333;
+    background: #919191;
     color: white;
 }
 .logo {
@@ -40,16 +40,17 @@ nav a {
 }
 .hero h1 {
     font-size: 36px;
-    color: #333;
+    color: #005f73;
 }
 .hero p {
     margin: 15px 0;
+    color: #333;
 }
 .cta {
     display: inline-block;
     padding: 10px 20px;
-    background: rgb(175, 208, 237);
-    color: rgb(0, 0, 0);
+    background: #0077b6;
+    color: white;
     text-decoration: none;
     border-radius: 5px;
 }
@@ -59,6 +60,7 @@ nav a {
 }
 .services h2, .testimonials h2, .consejos h2 {
     margin-bottom: 20px;
+    color: #005f73;
 }
 .services-container, .testimonials-container, .consejos-container {
     display: flex;
@@ -67,16 +69,49 @@ nav a {
 }
 .service, .testimonial, .consejos-post {
     width: 30%;
-    background: rgb(175, 208, 237);
+    background: #0077b6;
     padding: 20px;
     margin: 10px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgb(4, 139, 235);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: white;
 }
 footer {
-    background: #333;
+    background: #919191;
     color: white;
     text-align: center;
     padding: 20px;
     margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+    nav a {
+        margin: 10px 0;
+    }
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero img {
+        width: 80%;
+        margin-top: 20px;
+    }
+    .hero-text {
+        width: 100%;
+    }
+    .services-container, .testimonials-container, .consejos-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .service, .testimonial, .consejos-post {
+        width: 80%;
+    }
 }
