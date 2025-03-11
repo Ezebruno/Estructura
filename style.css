@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    background-color: #aba7a7;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: #333;
+    color: white;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background: #fff;
+}
+.hero img {
+    width: 50%;
+}
+.hero-text {
+    width: 45%;
+}
+.hero h1 {
+    font-size: 36px;
+    color: #333;
+}
+.hero p {
+    margin: 15px 0;
+}
+.cta {
+    display: inline-block;
+    padding: 10px 20px;
+    background: rgb(175, 208, 237);
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border-radius: 5px;
+}
+.services, .testimonials, .consejos {
+    padding: 50px;
+    text-align: center;
+}
+.services h2, .testimonials h2, .consejos h2 {
+    margin-bottom: 20px;
+}
+.services-container, .testimonials-container, .consejos-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.service, .testimonial, .consejos-post {
+    width: 30%;
+    background: rgb(175, 208, 237);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgb(4, 139, 235);
+}
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
