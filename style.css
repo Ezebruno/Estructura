@@ -40,11 +40,11 @@ nav a {
 }
 .hero h1 {
     font-size: 36px;
-    color: #005f73;
+    color: #50b2ce;
 }
 .hero p {
     margin: 15px 0;
-    color: #333;
+    color: #000000;
 }
 .cta {
     display: inline-block;
@@ -54,20 +54,20 @@ nav a {
     text-decoration: none;
     border-radius: 5px;
 }
-.services, .testimonials, .consejos {
+.services, .testimonials, .consejos, .faq {
     padding: 50px;
     text-align: center;
 }
-.services h2, .testimonials h2, .consejos h2 {
+.services h2, .testimonials h2, .consejos h2, .faq h2 {
     margin-bottom: 20px;
-    color: #005f73;
+    color: #50b2ce;
 }
-.services-container, .testimonials-container, .consejos-container {
+.services-container, .testimonials-container, .consejos-container, .faq-container {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
-.service, .testimonial, .consejos-post {
+.service, .testimonial, .consejos-post, .faq-item {
     width: 30%;
     background: #e14f4f;
     padding: 20px;
