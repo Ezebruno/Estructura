@@ -1,12 +1,14 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
+
 body {
     background: linear-gradient(to bottom, #ffffff, #f2f2f2);
 }
+
 header {
     display: flex;
     justify-content: space-between;
@@ -14,17 +16,37 @@ header {
     padding: 15px 50px;
     background: #50b2ce;
     color: white;
+    border-bottom: 3px solid #ffffff; /* Línea en la parte inferior */
 }
+
 .logo {
     font-size: 24px;
     font-weight: bold;
 }
+
+nav {
+    display: flex;
+    gap: 15px;
+}
+
 nav a {
     color: white;
-    margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
+    padding: 10px;
+    border-right: 2px solid white;
 }
+
+/* AGREGA UNA LÍNEA ENTRE LOS ELEMENTOS DEL MENÚ */
+nav a:not(:last-child)::after {
+    border-radius: none;
+}
+
+nav a:hover {
+    color: #f2f2f2;
+    text-decoration: underline;
+}
+
 .hero {
     display: flex;
     align-items: center;
@@ -32,50 +54,88 @@ nav a {
     padding: 50px;
     background: #fff;
 }
+
 .hero img {
     width: 50%;
 }
+
 .hero-text {
     width: 45%;
 }
+
 .hero h1 {
     font-size: 36px;
     color: #50b2ce;
+    text-transform: uppercase;
 }
+
 .hero p {
     margin: 15px 0;
-    color: #000000;
+    color: #333;
 }
+
 .cta {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 12px 25px;
     background: #e14f4f;
     color: white;
     text-decoration: none;
     border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out, transform 0.2s ease;
 }
-.services, .testimonials, .consejos, .faq {
+
+.cta:hover {
+    background: #c13e3e;
+    transform: scale(1.05);
+}
+
+/* Secciones */
+.services, .testimonials, .consejos, .faq, .quienes-somos {
     padding: 50px;
     text-align: center;
 }
-.services h2, .testimonials h2, .consejos h2, .faq h2 {
+
+.services h2, .testimonials h2, .consejos h2, .faq h2, .quienes-somos h2 {
     margin-bottom: 20px;
     color: #50b2ce;
+    font-size: 28px;
+    position: relative;
+    display: inline-block;
 }
-.services-container, .testimonials-container, .consejos-container, .faq-container {
+
+.services h2::after, .testimonials h2::after, .consejos h2::after, .faq h2::after, .quienes-somos h2::after {
+    content: "";
+    display: block;
+    width: 370px;
+    height: 3px;
+    background: #e14f4f;
+    margin: 5px auto;
+}
+
+.services-container, .testimonials-container, .consejos-container, .faq-container, .quienes-container {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
-.service, .testimonial, .consejos-post, .faq-item {
+
+.service, .testimonial, .consejos-post, .faq-item, .integrante {
     width: 30%;
     background: #e14f4f;
     padding: 20px;
     margin: 10px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     color: white;
+    border: 2px solid white;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+
+.service:hover, .testimonial:hover, .consejos-post:hover, .faq-item:hover, .integrante:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
 footer {
     background: #50b2ce;
     color: white;
@@ -84,33 +144,62 @@ footer {
     margin-top: 20px;
 }
 
+/* Estilos para enlaces en tarjetas */
+.integrante h3 a, .consejos-post a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.integrante h3 a:hover, .consejos-post a:hover {
+    color: #f2f2f2;
+    text-decoration: underline;
+}
+
+/* Responsivo */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
         text-align: center;
     }
+
     nav {
-        display: flex;
+        align-items: center;
         flex-direction: column;
     }
+
     nav a {
-        margin: 10px 0;
+        border-right: none; /* Elimina las líneas en móviles */
+        border-bottom: 1px solid white; /* Usa líneas horizontales en lugar de verticales */
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
     }
+
+    nav a:last-child {
+        border-bottom: none; /* Evita la línea en el último elemento */
+    }
+
     .hero {
         flex-direction: column;
         text-align: center;
     }
+
     .hero img {
         width: 80%;
         margin-top: 20px;
     }
+
     .hero-text {
         width: 100%;
     }
+
     .services-container, .testimonials-container, .consejos-container {
         flex-direction: column;
         align-items: center;
     }
+
     .service, .testimonial, .consejos-post {
         width: 80%;
     }
