@@ -203,4 +203,13 @@ footer {
     .service, .testimonial, .consejos-post {
         width: 80%;
     }
+    .faq-container {
+        flex-direction: column;
+        align-items: center;
+    }  
+
+    .faq-item {
+        width: 80%;
+        max-width: 400px;
+    }
 }
