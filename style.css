@@ -6,7 +6,7 @@
 }
 
 body {
-    background: linear-gradient(to bottom, #ffffff, #f2f2f2);
+    background: linear-gradient(to right, #1b2838, #3c4f65);
 }
 
 header {
@@ -14,9 +14,9 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 15px 50px;
-    background: #50b2ce;
+    background: #1b2838cc;
     color: white;
-    border-bottom: 3px solid #ffffff; /* Línea en la parte inferior */
+    border-bottom: 3px solid #17a2b8;
 }
 
 .logo {
@@ -35,16 +35,13 @@ nav a {
     font-weight: bold;
     padding: 10px;
     border-right: 2px solid white;
-}
-
-/* AGREGA UNA LÍNEA ENTRE LOS ELEMENTOS DEL MENÚ */
-nav a:not(:last-child)::after {
-    border-radius: none;
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.5);
 }
 
 nav a:hover {
-    color: #f2f2f2;
+    color: #17a2b8;
     text-decoration: underline;
+    box-shadow: 0 0 10px rgba(23, 162, 184, 0.8);
 }
 
 .hero {
@@ -52,7 +49,7 @@ nav a:hover {
     align-items: center;
     justify-content: space-between;
     padding: 50px;
-    background: #fff;
+    background: linear-gradient(to right, #1b2838, #3c4f65);
 }
 
 .hero img {
@@ -65,19 +62,19 @@ nav a:hover {
 
 .hero h1 {
     font-size: 36px;
-    color: #50b2ce;
+    color: #17a2b8;
     text-transform: uppercase;
 }
 
 .hero p {
     margin: 15px 0;
-    color: #333;
+    color: #ddd;
 }
 
 .cta {
     display: inline-block;
     padding: 12px 25px;
-    background: #e14f4f;
+    background: #17a2b8;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -86,11 +83,10 @@ nav a:hover {
 }
 
 .cta:hover {
-    background: #c13e3e;
+    background: #138496;
     transform: scale(1.05);
 }
 
-/* Secciones */
 .services, .testimonials, .consejos, .faq, .quienes-somos {
     padding: 50px;
     text-align: center;
@@ -98,10 +94,8 @@ nav a:hover {
 
 .services h2, .testimonials h2, .consejos h2, .faq h2, .quienes-somos h2 {
     margin-bottom: 20px;
-    color: #50b2ce;
+    color: #17a2b8;
     font-size: 28px;
-    position: relative;
-    display: inline-block;
 }
 
 .services h2::after, .testimonials h2::after, .consejos h2::after, .faq h2::after, .quienes-somos h2::after {
@@ -109,7 +103,7 @@ nav a:hover {
     display: block;
     width: 370px;
     height: 3px;
-    background: #e14f4f;
+    background: #17a2b8;
     margin: 5px auto;
 }
 
@@ -121,7 +115,7 @@ nav a:hover {
 
 .service, .testimonial, .consejos-post, .faq-item, .integrante {
     width: 30%;
-    background: #e14f4f;
+    background: #1b2838;
     padding: 20px;
     margin: 10px;
     border-radius: 8px;
@@ -136,28 +130,33 @@ nav a:hover {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
+.quienes-somos a {
+    color: #fefefe;
+    text-decoration: none; /* Opcional: quitar subrayado */
+}
+
+.quienes-somos a:hover {
+    color: #138496;
+}
 footer {
-    background: #50b2ce;
+    background: #1b2838;
     color: white;
     text-align: center;
     padding: 20px;
     margin-top: 20px;
 }
 
-/* Estilos para enlaces en tarjetas */
-.integrante h3 a, .consejos-post a {
-    color: rgb(255, 255, 255);
+footer a {
+    color: #ffffff;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s ease-in-out;
 }
 
-.integrante h3 a:hover, .consejos-post a:hover {
-    color: #f2f2f2;
+footer a:hover {
+    color: #138496;
     text-decoration: underline;
 }
 
-/* Responsivo */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -170,15 +169,15 @@ footer {
     }
 
     nav a {
-        border-right: none; /* Elimina las líneas en móviles */
-        border-bottom: 1px solid white; /* Usa líneas horizontales en lugar de verticales */
+        border-right: none;
+        border-bottom: 1px solid white;
         width: 100%;
         text-align: center;
         padding: 10px 0;
     }
 
     nav a:last-child {
-        border-bottom: none; /* Evita la línea en el último elemento */
+        border-bottom: none;
     }
 
     .hero {
@@ -202,20 +201,5 @@ footer {
 
     .service, .testimonial, .consejos-post {
         width: 80%;
-    }
-    .faq-container {
-        flex-direction: column;
-        align-items: center;
-        width: 100%; /* Asegura que el contenedor no se desborde */
-        padding: 0 5%; /* Margen interno para evitar desbordes */
-    } 
-
-    .faq-item {
-        width: 90%; /* Reduce el ancho para evitar que se salga */
-        max-width: 320px; /* Límite para dispositivos pequeños */
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-        padding: 15px;
-        box-sizing: border-box; /* Evita que el padding haga que se desborde */
     }
 }
